@@ -1,0 +1,69 @@
+﻿@page "/imperial"
+
+<h2>Imperial</h2>
+
+<h3>Length</h3>
+
+<div class="converter">
+    <p>Feet to Meter.</p>
+    <input type="number" @bind="FtmInput" /> Feet = @FeetToMeters(FtmInput) Meter.
+</div>
+
+<div class="converter">
+    <p>Miles to Kilometer</p>
+    <input type="number" @bind="MtkInput" /> Miles = @MilesToKilometers(MtkInput) Kilometer.
+</div>
+
+<h3>Mass</h3>
+
+<div class="converter">
+    <p>Pounds to Kilogram</p>
+    <input type="number" @bind="PtkInput" /> Pounds = @PoundsToKilogram(PtkInput) Kilogram.
+</div>
+
+<div class="converter">
+    <p>Ounces to Gram</p>
+    <input type="number" @bind="OtgInput" /> Ounces = @OuncesToGram(OtgInput) Gram.
+</div>
+
+<h3>Volume</h3>
+
+<div class="converter">
+    <p>US Gallon to Liter</p>
+    <input type="number" @bind="GtlInput" /> Gallon = @GallonToLiter(GtlInput) Liter.
+</div>
+
+@code {
+
+    private double FtmInput;
+    private double MtkInput;
+    private double PtkInput;
+    private double OtgInput;
+    private double GtlInput;
+
+    private double FeetToMeters(double input)
+    {
+        return input / 3.281;
+    }
+
+    private double MilesToKilometers(double input)
+    {
+        return input * 1.609;
+    }
+
+    private double PoundsToKilogram(double input)
+    {
+        return input / 2.205;
+    }
+
+    private double OuncesToGram(double input)
+    {
+        return input * 28.35;
+    }
+
+    private double GallonToLiter(double input)
+    {
+        return input * 3.785;
+    }
+
+}

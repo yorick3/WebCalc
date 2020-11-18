@@ -1,0 +1,20 @@
+﻿@page "/electrical"
+
+<h2>Electrical</h2>
+
+<h3>Power</h3>
+
+<div class="converter">
+    <p>Ampere and Voltage to Watt</p>
+    <input type="number" @bind="VtwInput" /> Volt <input type="number" @bind="AtwInput" /> Ampere = @VoltAmpereToWatt(VtwInput, AtwInput) Watt.
+</div>
+
+@code {
+    private double AtwInput;
+    private double VtwInput;
+
+    private double VoltAmpereToWatt(double volts, double ampere)
+    {
+        return volts * ampere;
+    }
+}

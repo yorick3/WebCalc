@@ -1,0 +1,37 @@
+﻿@page "/programming"
+
+<h2>Programming</h2>
+
+<h3>Binary</h3>
+
+<div class="converter">
+    <p>Gibibyte to Mebibyte</p>
+    <input type="number" @bind="GtmInput" /> Gebibyte = @GibibyteToMebibyte(GtmInput) Mebibyte.
+</div>
+
+<h3>Base64</h3>
+
+<div class="converter">
+    <p>Text to Base64</p>
+    <input type="text" @bind="Ttb64Input" /> = @TextToBase64(Ttb64Input)
+</div>
+
+@code {
+    private int GtmInput;
+    private string Ttb64Input;
+
+    private int GibibyteToMebibyte(int input)
+    {
+        return input * 1024;
+    }
+
+    private string TextToBase64(string input)
+    {
+        if(!string.IsNullOrEmpty(input))
+        {
+            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
+            return string.Join(" ", bytes);
+        }
+        return "";
+    }
+}

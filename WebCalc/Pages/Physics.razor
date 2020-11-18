@@ -1,0 +1,17 @@
+﻿@page "/physics"
+
+<h2>Physics</h2>
+
+<div class="converter">
+    <p>Kilowatt to Mechanical Horsepower</p>
+    <input type="number" @bind="KtwInput" /> Kilowatt = @KilowattToHorsepower(KtwInput) Horsepower.
+</div>
+
+@code {
+    private double KtwInput;
+
+    private double KilowattToHorsepower(double input)
+    {
+        return input * 1.341;
+    }
+}

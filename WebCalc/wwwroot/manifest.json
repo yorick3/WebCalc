@@ -1,0 +1,24 @@
+{
+  "name": "WebCalc",
+  "short_name": "WebCalc",
+  "description": "A web app for calculations and conversions.",
+  "author": "yorick3",
+  "lang": "en-US",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
